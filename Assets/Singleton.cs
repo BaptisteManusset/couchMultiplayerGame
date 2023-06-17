@@ -167,7 +167,7 @@ public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
         }
     }
 
-    void Start()
+    private void Start()
     {
         // do not start it twice
         if (IsStarted) return;
@@ -180,7 +180,7 @@ public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
         IsStarted = true;
     }
 
-    void OnDestroy()
+    private void OnDestroy()
     {
         // Here we are dealing with a duplicate so we don't need to shut the singleton down
         if (this != _instance) return;

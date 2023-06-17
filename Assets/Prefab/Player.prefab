@@ -5092,7 +5092,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &6768937062030746651
 MonoBehaviour:
@@ -5234,7 +5234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 952d49f1633cf4045b2689ac0baeaa23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Icon: {fileID: 21300000, guid: 9c0d6ec706e01ce448aea81584af092b, type: 3}
+  Icon: {fileID: 21300000, guid: a1cc24c8b4bb79d48be64f3c6a1e2a6f, type: 3}
   Name: Player 1
 --- !u!114 &6329844337638369704
 MonoBehaviour:
@@ -5248,7 +5248,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5da3b95c325a4a9cb10fc70ae47bf2b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   maxHealth: 3
   currentHealth: 3
 --- !u!114 &89196133050542252
@@ -5263,4 +5262,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eafe5ade05fc4d15920499dc06f6c0e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_statue: 0
+  m_statue: 1
