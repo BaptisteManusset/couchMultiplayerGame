@@ -1,19 +1,15 @@
 ﻿using System;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Game
 {
     [Serializable]
     public class WaitState : TimedState
     {
-        private GameStateMachine stateMachine;
-
         [SerializeField] private BaseState m_baseState;
 
         internal override void PrepareState()
         {
-            stateMachine = owner as GameStateMachine;
             base.PrepareState();
             CountDown.SetDuration(5);
 

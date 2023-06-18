@@ -2,11 +2,11 @@
 
 public class PlayerStateMachine : MonoBehaviour
 {
-    public delegate void PlayerStateEvent(StateEnum a_state);
+    public delegate void PlayerStateEvent(StatueEnum a_statue);
 
     public PlayerStateEvent OnPlayerStateEvent;
 
-    public enum StateEnum
+    public enum StatueEnum
     {
         Wait,
         Alive,
@@ -14,15 +14,17 @@ public class PlayerStateMachine : MonoBehaviour
     }
 
 
-    [SerializeField] private StateEnum m_statue = StateEnum.Wait;
+    [SerializeField] private StatueEnum m_statue = StatueEnum.Wait;
 
-    public StateEnum Statue => m_statue;
+    public StatueEnum Statue => m_statue;
 
-    public void SetStatue(StateEnum a_state)
+    public void SetStatue(StatueEnum a_statue, bool a_force = false)
     {
-        if (m_statue == a_state) return;
+        if (m_statue == a_statue) return;
 
-        m_statue = a_state;
+        if (m_statue == StatueEnum.Dead && !a_force) return;
+
+        m_statue = a_statue;
         OnPlayerStateEvent?.Invoke(m_statue);
     }
 }

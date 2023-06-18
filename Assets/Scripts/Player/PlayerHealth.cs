@@ -38,7 +38,7 @@ public class PlayerHealth : MonoBehaviour
     {
         OnPlayerDied?.Invoke(m_player);
 
-        m_player.State.SetStatue(PlayerStateMachine.StateEnum.Dead);
+        m_player.State.SetStatue(PlayerStateMachine.StatueEnum.Dead);
         Debug.Log("Le joueur est mort !");
     }
 }

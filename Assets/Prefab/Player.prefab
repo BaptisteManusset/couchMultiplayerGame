@@ -5234,6 +5234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 952d49f1633cf4045b2689ac0baeaa23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_movablePart: {fileID: 6768937062030746648}
   Icon: {fileID: 21300000, guid: a1cc24c8b4bb79d48be64f3c6a1e2a6f, type: 3}
   Name: Player 1
 --- !u!114 &6329844337638369704
@@ -5262,4 +5263,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eafe5ade05fc4d15920499dc06f6c0e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_statue: 1
+  m_statue: 0

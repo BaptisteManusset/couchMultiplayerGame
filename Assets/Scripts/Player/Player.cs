@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     private PlayerStateMachine m_state;
     public PlayerStateMachine State => Tools.Get(ref m_state, GetComponent<PlayerStateMachine>());
 
+    [SerializeField] private GameObject m_movablePart;
 
     public Sprite Icon;
     public string Name;
@@ -26,7 +27,7 @@ public class Player : MonoBehaviour
     {
         if (a_player != this) return;
 
-        gameObject.SetActive(false);
+        m_movablePart.SetActive(false);
     }
 
     private void OnDestroy()

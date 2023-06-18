@@ -1,4 +1,3 @@
-using Game;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -62,6 +61,5 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    private bool CanAct() => player.State.Statue == PlayerStateMachine.StateEnum.Alive
-                             && GameManager.Instance.StateMachine.CurrentState is PlayState;
+    private bool CanAct() => player.State.Statue == PlayerStateMachine.StatueEnum.Alive;
 }

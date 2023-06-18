@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
 
 namespace Game
 {
@@ -28,7 +27,7 @@ namespace Game
 
             foreach (Player player in GameManager.Instance.Party.Players)
             {
-                if (player.State.Statue != PlayerStateMachine.StateEnum.Alive) continue;
+                if (player.State.Statue != PlayerStateMachine.StatueEnum.Alive) continue;
                 b.Add(player);
             }
 

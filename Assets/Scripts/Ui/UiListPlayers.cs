@@ -13,6 +13,11 @@ public class UiListPlayers : MonoBehaviour
 
     public void DisplayPlayers(List<Player> m_source)
     {
+        if (m_playerUiElements.Count != 0)
+        {
+            Clear();
+        }
+
         for (int i = 0; i < m_source.Count; i++)
         {
             GameObject instance = Instantiate(PlayerUiPrefab, UiPlayerListParent);
