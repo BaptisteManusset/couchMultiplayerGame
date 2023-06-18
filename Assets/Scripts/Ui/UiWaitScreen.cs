@@ -1,9 +1,7 @@
-using System;
 using System.Globalization;
 using Game;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class UiWaitScreen : MonoBehaviour

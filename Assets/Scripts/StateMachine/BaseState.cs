@@ -6,7 +6,7 @@ using UnityEngine;
 /// StateMachine uses these virtual methods to call state when it needs to prepare itself for operating, updating or even being destroyed.
 /// </summary>
 [Serializable]
-public abstract class BaseState
+public abstract class BaseState : MonoBehaviour
 {
     // Reference to our state machine.
     [HideInInspector] public StateMachine owner;
@@ -19,6 +19,7 @@ public abstract class BaseState
     {
         // Debug.Log($"{GetType()}: PrepareState");
         owner.OnPrepareState?.Invoke(this);
+        gameObject.SetActive(true);
     }
 
     /// <summary>
@@ -33,5 +34,12 @@ public abstract class BaseState
     {
         owner.OnDestroyState?.Invoke(this);
         // Debug.Log($"{GetType()}: DestroyState");
+        gameObject.SetActive(false);
+    }
+
+
+    private void Reset()
+    {
+        gameObject.name = GetType().ToString();
     }
 }

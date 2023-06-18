@@ -1,4 +1,3 @@
-using System;
 using Game;
 using UnityEngine;
 using UnityEngine.UI;
@@ -24,7 +23,7 @@ public class UiGameScreen : MonoBehaviour
 
     private void Update()
     {
-        m_countdown.fillAmount = m_playState.CountDown.normalizedProgress;
+        // m_countdown.fillAmount = m_playState.CountDown.normalizedProgress;
     }
 
     private void OnDestroy()

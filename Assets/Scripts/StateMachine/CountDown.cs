@@ -21,23 +21,11 @@ public class CountDown
 
     public void Update()
     {
-        if (started == false)
-        {
-            Debug.Log("No started");
-            return;
-        }
+        if (!started) return;
 
-        if (finish)
-        {
-            Debug.Log("finish");
-            return;
-        }
+        if (finish) return;
 
-        if (paused)
-        {
-            Debug.Log("paused");
-            return;
-        }
+        if (paused) return;
 
         progress -= Time.deltaTime;
         if (progress <= 0)

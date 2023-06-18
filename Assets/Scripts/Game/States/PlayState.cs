@@ -1,28 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 
 namespace Game
 {
-    public class PlayState : TimedState
+    public class PlayState : ParentStateMachineBaseState
     {
-        internal override void PrepareState()
-        {
-            base.PrepareState();
-            CountDown.SetDurationAndStart(5);
-        }
+ 
 
         public override void UpdateState()
         {
             base.UpdateState();
-            if (CountDown.finish) owner.ChangeState(new GameOverState());
+            // if (CountDown.finish) owner.ChangeState(m_nextState);
         }
 
         public override void DestroyState()
         {
             base.DestroyState();
 
-            FindWinners();
+            // FindWinners();
         }
 
         private static void FindWinners()

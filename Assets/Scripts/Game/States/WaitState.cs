@@ -1,4 +1,6 @@
 ﻿using System;
+using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Game
 {
@@ -6,6 +8,8 @@ namespace Game
     public class WaitState : TimedState
     {
         private GameStateMachine stateMachine;
+
+        [SerializeField] private BaseState m_baseState;
 
         internal override void PrepareState()
         {
@@ -39,7 +43,7 @@ namespace Game
 
             if (CountDown.progress <= 0)
             {
-                owner.ChangeState(new PlayState());
+                owner.ChangeState(m_baseState);
             }
 
             base.UpdateState();
